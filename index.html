@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidalizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tidalizer 🎹</h1>
+        <p>Traductor de patrones entre Tidal Cycles y Strudel</p>
+    </header>
+
+    <main class="converter-container">
+        <div class="code-column">
+            <label for="source-lang">Desde:</label>
+            <select id="source-lang">
+                <option value="tidal" selected>Tidal Cycles (Haskell)</option>
+                <option value="strudel">Strudel (JavaScript)</option>
+            </select>
+            <textarea id="input-code" placeholder="Pega tu código de Tidal aquí...&#10;d1 $ sound &quot;bd sd hh cp&quot;"></textarea>
+        </div>
+
+        <div class="action-column">
+            <button id="convert-btn">Convertir →</button>
+            <div id="loader" class="loader hidden"></div>
+        </div>
+
+        <div class="code-column">
+            <label for="target-lang">Hacia:</label>
+            <input type="text" id="target-lang" value="Strudel (JavaScript)" readonly>
+            <textarea id="output-code" placeholder="Aquí aparecerá el código traducido..." readonly></textarea>
+            <button id="copy-btn" title="Copiar al portapapeles">📋</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Creado como un MVP. La traducción es realizada por una IA.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
